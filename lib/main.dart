@@ -1,13 +1,13 @@
+import 'core/router/router.dart';
+import 'home/data/repos/home_repo_impl.dart';
+import 'home/manger/featured_books%20cubit/featured_books_cubit.dart';
+import 'home/manger/newset_cubit/newset_book_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'constents.dart';
-import 'core/utils/app_router.dart';
 import 'core/utils/selver_locator.dart';
-import 'features/home/data/repos/home_repo_impl.dart';
-import 'features/home/persentation/manger/featured_books%20cubit/featured_books_cubit.dart';
-import 'features/home/persentation/manger/newset_cubit/newset_book_cubit.dart';
 
 void main() {
   setupSelverLocator();
@@ -33,7 +33,7 @@ class BooklyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp.router(
-        routerConfig: AppRouter.router,
+        routerConfig: router.config(),
         theme: ThemeData.dark().copyWith(
             scaffoldBackgroundColor: kPrimaryColor,
             textTheme:
